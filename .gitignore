@@ -1,0 +1,6 @@
+tests/
+*.swp
+*~
+#*#
+*.o
+libmystd.a
