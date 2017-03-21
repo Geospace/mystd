@@ -21,6 +21,7 @@ SRCS	= my_strncpy.c	\
 	  my_calloc.c	\
 	  my_strdup.c	\
 	  my_strncmp.c	\
+	  my_strcmp.c	\
 	  my_split.c	\
 
 OBJS	= $(SRCS:.c=.o)
