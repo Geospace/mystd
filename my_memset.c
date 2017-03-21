@@ -8,10 +8,14 @@
 ** Last update Tue Nov 15 15:31:38 2016 Lucas Santoni
 */
 
-void	my_memset(void *ptr, char c, int n)
+#include "mystd.h"
+
+void	my_memset(void *ptr, const char c, int n)
 {
   char	*dest;
 
+  if (ptr == NULL)
+    return ;
   dest = ptr;
   while (n--)
     *dest++ = c;

@@ -8,12 +8,16 @@
 ** Last update Tue Nov 15 16:42:23 2016 Lucas Santoni
 */
 
-char	*my_strncat(char *d, char *s, int n)
+#include "mystd.h"
+
+char	*my_strncat(char *d, const char *s, int n)
 {
-  while (*d != '\0')
+  if (d == NULL || s == NULL || n <= 0)
+    return (NULL);
+  while (*d != END_STR)
     d++;
-  while(n-- > 0 && *s != '\0')
+  while (n-- > 0 && *s != END_STR)
     *d++ = *s++;
-  *d++ = '\0';
+  *d++ = END_STR;
   return (d);
 }

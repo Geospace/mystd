@@ -8,18 +8,27 @@
 ** Last update Tue Nov 15 11:47:14 2016 Lucas Santoni
 */
 
-#ifndef MYSTD_H_
-#define MYSTD_H_
+#pragma once
 
-int			my_strlen(char *);
-void			my_memset(void *, char, int);
-char			*my_strncpy(char *, char *, int);
-char			*my_strncat(char *, char *, int);
-void			*my_memcpy(void *, void *, int);
+/*
+** Dependencies
+*/
+#include <stdlib.h>
+#include <stdarg.h>
+#include "common.h"
+
+/*
+** Strings
+*/
+int			my_strlen(const char *);
+char			*my_strncpy(char *, const char *, int);
+char			*my_strncat(char *, const char *, int);
+int			my_strncmp(const char *, const char *, int);
+char			*my_strdup(const char *str);
+
+/*
+** Memory
+*/
 void			*my_calloc(int, int);
-int			my_atoi(char *);
-long int		my_atol(char *);
-unsigned int		my_atou(char *);
-unsigned long int	my_atoul(char *);
-
-#endif /* !MYSTD_H_ */
+void			my_memset(void *, const char, int);
+void			*my_memcpy(void *, void *, int);

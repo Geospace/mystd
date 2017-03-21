@@ -8,14 +8,15 @@
 ** Last update Tue Nov 15 15:38:13 2016 Lucas Santoni
 */
 
-#include <stdlib.h>
 #include "mystd.h"
 
-void	*my_calloc(int nb, int size)
+void	*my_calloc(const int nb, const int size)
 {
   void	*ptr;
 
   ptr = malloc(nb * size);
+  if (ptr == NULL)
+    return (NULL);
   my_memset(ptr, 0, nb * size);
   return (ptr);
 }

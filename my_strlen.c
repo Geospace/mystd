@@ -8,12 +8,16 @@
 ** Last update Tue Nov 15 13:51:16 2016 Lucas Santoni
 */
 
-int	my_strlen(char *s)
+#include "mystd.h"
+
+int	my_strlen(const char *s)
 {
   int	i;
 
+  if (s == NULL)
+    return (FAILURE);
   i = 0;
-  while(s[i] != '\0')
+  while (s[i] != END_STR)
     i++;
   return (i);
 }

@@ -11,14 +11,17 @@
 CC	= gcc
 
 CFLAGS	+= -Wall -Wextra -Werror -pedantic
-CFLAGS	+= -g3
+CFLAGS	+= -O
 
-SRCS	= my_strncpy.c \
-	  my_strncat.c \
-	  my_strlen.c \
-	  my_memset.c \
-	  my_memcpy.c \
-	  my_calloc.c \
+SRCS	= my_strncpy.c	\
+	  my_strncat.c	\
+	  my_strlen.c	\
+	  my_memset.c	\
+	  my_memcpy.c	\
+	  my_calloc.c	\
+	  my_strdup.c	\
+	  my_strncmp.c	\
+	  my_split.c	\
 
 OBJS	= $(SRCS:.c=.o)
 
